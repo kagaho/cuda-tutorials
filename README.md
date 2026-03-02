@@ -105,7 +105,7 @@ int main() {
 }
 ```
 
-# Stert tutorials
+# Start tutorials  
 
 The files are numbered by progression order and thoroughy explained, simply read through to understand each concept, then compile and run any of the files using `nvcc <filename> -o output && ./output`, but be sure to have a GPU with the appropriate libraries installed.
 
