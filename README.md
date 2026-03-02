@@ -1,11 +1,7 @@
 Forked from [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8/)
 
 # From zero to hero CUDA for accelerated maths and machine learning.
-
-![License](https://img.shields.io/github/license/hmunachi/cuda-repo?style=flat-square) [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com//company/80434055) [![Twitter](https://img.shields.io/twitter/follow/hmunachii?style=social)](https://twitter.com/hmunachii)
-
-Author: [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8/) 
-
+  
 ## Table of Contents
 
 - [Introduction](#introduction)
