@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/logo.jpg" alt="Alt text"/>
-</p>
+Forked from [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8/)
 
 # From zero to hero CUDA for accelerated maths and machine learning.
 
