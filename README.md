@@ -135,7 +135,7 @@ CUDA abstracts the GPU as a device capable of executing thousands of threads org
 - **Registers:** Fast, per-thread storage for frequently used variables.
 
 
-![diagram](mermaid-diagram-thread.png
+![diagram](mermaid-diagram-thread.png)
 
 - Your CPU code calls a kernel launch: helloCUDA<<<grid, block>>>().
 - That launch starts work on the GPU.
