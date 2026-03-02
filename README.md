@@ -148,7 +148,7 @@ VecAdd<<<1, N>>>(A, B, C);
 }
 ```
 
-**Thread Hierarquy:**
+**Thread Hierarchy:**
 
 ```python
 ∕∕ Kernel definition
