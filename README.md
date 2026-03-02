@@ -9,7 +9,7 @@ Forked from [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8
 - [Comparing CPU vs GPU](#Comparing-CPU-vs-GPU)
 - [Parallel vs concurrent](#Parallel-vs-concurrent)
 - [Process vs thread](Process-vs-thread)
-- [Context switch (CPU)](Context-switch-(CPU))
+- [Context switch (CPU)](Context-switch-(CPU)) 
 - [Threads on GPU are different](Threads-on-GPU-are-different)
 - [Thread challenges (CPU and GPU)](Thread-challenges-(CPU-and-GPU))
 - [Memory wall (CPU and GPU)](Memory-wall-(CPU-and-GPU))
