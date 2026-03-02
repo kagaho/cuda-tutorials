@@ -6,6 +6,7 @@ Forked from [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8
 
 - [Introduction](#introduction)
 - [What is a GPU?](#what-is-a-gpu)
+- [Comparing CPU vs GPU](#Comparing-CPU-vs-GPU) 
 - [Overview of GPU Architecture](#overview-of-gpu-architecture)
 - [Introduction to CUDA](#introduction-to-cuda)
 - [The CUDA Programming Model](#the-cuda-programming-model)
@@ -34,8 +35,58 @@ A **GPU (Graphics Processing Unit)** is a specialized processor designed for par
 
 ---
 
-## GPU vs CPU
+## Comparing CPU vs GPU
 
+A simple way to think about it:
+
+- **CPU:** a few powerful cores → great for *one task at a time*, complex logic, operating system work.
+- **GPU:** many smaller cores → great for *doing the same operation on lots of data*.
+
+### Quick comparison
+
+| CPU | GPU |
+|---|---|
+| Few, strong cores | Many, smaller cores |
+| Optimized for **low latency** (fast response) | Optimized for **high throughput** (lots of work/sec) |
+| Handles many different tasks well | Best when the same operation repeats over many elements |
+| OS manages threads with **context switching** | GPU runs many threads and uses **hardware scheduling** to stay busy |
+| Big caches help reduce memory delays | Many threads help **hide memory latency** |
+
+### Parallel vs concurrent (beginner)
+- **Concurrent:** tasks take turns (may overlap in time, not necessarily at the exact same moment).
+- **Parallel:** tasks run at the same time (usually on multiple CPU cores, or many GPU cores).
+
+### Process vs thread (CPU idea)
+- **Process:** a running program with its own memory space (more isolation, heavier).
+- **Thread:** an execution path inside a process (threads share memory → faster, but riskier).
+
+### Context switch (CPU)
+A **context switch** is when the OS pauses one thread/process and runs another.
+- It saves/loads CPU state → **overhead**
+- Too many switches can slow programs down
+
+### Threads on GPU are different (CUDA idea)
+- A CUDA **thread** is not the same as a CPU thread.
+- CUDA threads are created in huge numbers and are **very lightweight**.
+- They are organized into:
+  - **Blocks** (threads that can cooperate)
+  - **Grids** (collection of blocks)
+- GPU scheduling is mostly hardware-driven (not OS-style time-slicing per thread).
+
+### Thread challenges (CPU and GPU)
+- **Synchronization / race condition:** if multiple threads touch the same data, timing can break correctness.
+  - Example: two threads increment the same counter → result can be wrong without protection.
+- **Scheduling:** performance can vary depending on which threads run when.
+  - On CPU: OS scheduling affects latency/fairness.
+  - On GPU: how threads map to hardware affects performance and occupancy.
+
+### Memory wall (CPU and GPU)
+Even if you have many cores, you can still be limited by memory speed:
+- **CPU:** relies heavily on caches to avoid slow RAM
+- **GPU:** relies on high bandwidth + many threads to hide latency
+If your workload constantly waits for memory, adding more threads/cores may not speed it up much.
+
+---
 
 
 ## Overview of GPU Architecture
