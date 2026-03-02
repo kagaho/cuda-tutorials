@@ -34,6 +34,10 @@ A **GPU (Graphics Processing Unit)** is a specialized processor designed for par
 
 ---
 
+## GPU vs CPU
+
+
+
 ## Overview of GPU Architecture
 
 GPUs differ from CPUs in several essential ways:
