@@ -6,7 +6,8 @@ Forked from [Henry Ndubuaku](https://www.linkedin.com/in/henry-ndubuaku-7b6350b8
 
 - [Introduction](#introduction)
 - [What is a GPU?](#what-is-a-gpu)
-- [Comparing CPU vs GPU](#Comparing-CPU-vs-GPU) 
+- [Comparing CPU vs GPU](#Comparing-CPU-vs-GPU)
+- [Parallel vs concurrent](#Parallel-vs-concurrent)
 - [Overview of GPU Architecture](#overview-of-gpu-architecture)
 - [Introduction to CUDA](#introduction-to-cuda)
 - [The CUDA Programming Model](#the-cuda-programming-model)
