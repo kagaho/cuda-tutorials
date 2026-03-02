@@ -130,7 +130,46 @@ CUDA abstracts the GPU as a device capable of executing thousands of threads org
 - **Block:** A group of threads that can share data through fast shared memory and synchronize their execution.
 - **Grid:** A collection of thread blocks executing the same kernel.
 
-**Diagram:**
+**Kernel:**
+
+```python
+∕∕ Kernel definition
+__global__ void VecAdd(float* A, float* B, float* C)
+{
+int i = threadIdx.x;
+C[i] = A[i] + B[i];
+}
+{
+int main()
+...
+∕∕ Kernel invocation with N threads
+VecAdd<<<1, N>>>(A, B, C);
+...
+}
+```
+
+**Thread Hierarquy:**
+
+```python
+∕∕ Kernel definition
+__global__ void MatAdd(float A[N][N], float B[N][N],
+float C[N][N])
+{
+int i = threadIdx.x;
+int j = threadIdx.y;
+C[i][j] = A[i][j] + B[i][j];
+}
+{
+int main()
+...
+∕∕ Kernel invocation with one block of N * N * 1 threads
+int numBlocks = 1;
+dim3 threadsPerBlock(N, N);
+MatAdd<<<numBlocks, threadsPerBlock>>>(A, B, C);
+...
+}
+```
+
 
 
 ### Memory Hierarchy
