@@ -134,6 +134,17 @@ CUDA abstracts the GPU as a device capable of executing thousands of threads org
 - **Constant and Texture Memory:** Specialized spaces optimized for specific data access patterns.
 - **Registers:** Fast, per-thread storage for frequently used variables.
 
+
+![diagram](mermaid-diagram-thread.png
+
+- Your CPU code calls a kernel launch: helloCUDA<<<grid, block>>>().
+- That launch starts work on the GPU.
+- The GPU runs the kernel as a Grid (the whole launch).
+- The Grid is split into Blocks (Block 0, Block 1, …).
+- Each Block contains multiple Threads (Thread 0, Thread 1, …).
+- Inside each block, threads have IDs like threadIdx.x = 0..blockDim.x-1.
+- cudaDeviceSynchronize() makes the CPU wait until the GPU finishes.
+
 ---
 
 ## Writing CUDA Code: A Simple Example
